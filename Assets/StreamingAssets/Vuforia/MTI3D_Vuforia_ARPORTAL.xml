@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="ground" size="40.000000 51.749844" />
+    <ImageTarget name="drone" size="6.500000 11.119249" />
+    <ImageTarget name="astronaut" size="6.500000 11.119249" />
+  </Tracking>
+</QCARConfig>

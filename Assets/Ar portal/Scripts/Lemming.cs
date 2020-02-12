@@ -6,12 +6,15 @@ public class Lemming : MonoBehaviour
 {
     [SerializeField] float speed = 10;
     Rigidbody rb;
+    public int destination = -1;
+    public int count = 0;
 
 
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
         Destroy(gameObject, 15);
+
     }
 
     void FixedUpdate()

@@ -12,6 +12,13 @@ public class Spawner : MonoBehaviour
     [SerializeField] float repeatRate = 5;
 
 
+    GameManager gm;
+    private void Awake()
+    {
+        gm = FindObjectOfType<GameManager>();
+    }
+
+
     void Start()
     {
         InvokeRepeating(nameof(Spawning), delayBeforeFirst, repeatRate);
@@ -20,6 +27,6 @@ public class Spawner : MonoBehaviour
     void Spawning()
     {
         GameObject instance =  Instantiate(lemming, transform.position, transform.rotation, parent);
-        Debug.Log("Spawn", instance);
+        gm.spawned++;
     }
 }
