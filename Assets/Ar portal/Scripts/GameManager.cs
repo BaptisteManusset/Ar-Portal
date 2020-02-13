@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
     public int spawned = 0;
     public int kill = 0;
     public int save = 0;
+    public int succesNumber = 10;
+    public UnityEvent endEvent;
+
 
 
     [Space(30)]
@@ -42,5 +46,14 @@ public class GameManager : MonoBehaviour
     public void ToggleOrange()
     {
         PortalOrangeState(!portalOrangeFound);
+    }
+
+
+    public void FixedUpdate()
+    {
+        if(succesNumber <= save)
+        {
+            endEvent.Invoke();
+        }
     }
 }

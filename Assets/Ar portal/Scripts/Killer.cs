@@ -11,10 +11,12 @@ public class Killer : MonoBehaviour
 
     GameManager gm;
     [SerializeField] AudioSource deathSound;
+    [SerializeField] ParticleSystem particle;
 
     private void Awake()
     {
         gm = FindObjectOfType<GameManager>();
+        particle = FindObjectOfType<ParticleSystem>();
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -23,6 +25,7 @@ public class Killer : MonoBehaviour
 
             deathSound.transform.position = other.transform.position;
             deathSound.Play();
+            particle.Play();
 
             Destroy(other.gameObject);
             gm.kill++;
