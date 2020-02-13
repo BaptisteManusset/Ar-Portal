@@ -8,6 +8,7 @@ public class Finisher : MonoBehaviour
     public int count = 0;
 
     GameManager gm;
+    AudioSource audio;
     private void Awake()
     {
         gm = FindObjectOfType<GameManager>();
@@ -20,6 +21,7 @@ public class Finisher : MonoBehaviour
         {
             gm.save++;
             Destroy(other.gameObject);
+            audio.Play();
         }
     }
 }

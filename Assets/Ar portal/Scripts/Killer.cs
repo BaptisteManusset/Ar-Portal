@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class Killer : MonoBehaviour
 {
+
+
+
     [SerializeField] string tagMask = "Lemming";
 
     GameManager gm;
+    [SerializeField] AudioSource deathSound;
+
     private void Awake()
     {
         gm = FindObjectOfType<GameManager>();
@@ -15,8 +20,14 @@ public class Killer : MonoBehaviour
     {
         if (other.CompareTag(tagMask) == true)
         {
+
+            deathSound.transform.position = other.transform.position;
+            deathSound.Play();
+
             Destroy(other.gameObject);
             gm.kill++;
+
+
         }
     }
 }

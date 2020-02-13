@@ -10,6 +10,14 @@ public class Portal : MonoBehaviour
     [SerializeField] Portal destination;
     [SerializeField] [Tooltip("Destination a l'interieur du portail actuel")] Transform selfDestination;
     [SerializeField] Vector3 offset = new Vector3(0, .95f, 0);
+    AudioSource audio;
+    void Awake()
+    {
+        audio = GetComponent<AudioSource>();
+
+
+    }
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -27,8 +35,7 @@ public class Portal : MonoBehaviour
             Quaternion exitPortalRotation = destination.transform.rotation;
 
 
-
-            //lm.count++;
+            audio.PlayOneShot(audio.clip);
             lm.destination = destination.GetHashCode();
 
 
@@ -36,7 +43,7 @@ public class Portal : MonoBehaviour
             Vector2 velocity = rb.velocity;
             velocity = exitPortalRotation * velocity;
 
-            other.transform.position = exitPortalPosition + offset;
+            other.transform.position = exitPortalPosition ;
             other.transform.rotation = exitPortalRotation * Quaternion.Euler(0, 180, 0);
             rb.velocity = velocity;
         }
