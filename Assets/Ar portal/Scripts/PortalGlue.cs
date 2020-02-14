@@ -15,9 +15,9 @@ public class PortalGlue : MonoBehaviour
     {
         RaycastHit hit;
         // Does the ray intersect any objects excluding the player layer
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out hit, Mathf.Infinity, layerMask))
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, Mathf.Infinity, layerMask))
         {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.down) * hit.distance, Color.yellow);
+            Debug.DrawRay(transform.position, Vector3.down * hit.distance, Color.yellow);
             Debug.Log("Did Hit",gameObject);
 
             portal.transform.position = hit.point;
@@ -25,7 +25,7 @@ public class PortalGlue : MonoBehaviour
         }
         else
         {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.down) * 1000, Color.white);
+            Debug.DrawRay(transform.position, Vector3.down * 1000, Color.white);
             Debug.Log("Did not Hit", gameObject);
         }
     }

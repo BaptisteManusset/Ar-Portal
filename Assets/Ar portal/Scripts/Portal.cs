@@ -40,12 +40,12 @@ public class Portal : MonoBehaviour
 
 
 
-            Vector2 velocity = rb.velocity;
-            velocity = exitPortalRotation * velocity;
+            //Vector2 velocity = rb.velocity;
+            //velocity = exitPortalRotation * velocity;
 
-            other.transform.position = exitPortalPosition ;
-            other.transform.rotation = exitPortalRotation * Quaternion.Euler(0, 180, 0);
-            rb.velocity = velocity;
+            other.transform.position = exitPortalPosition;
+            other.transform.rotation = exitPortalRotation;
+            rb.velocity = Vector3.zero; ;
         }
     }
 

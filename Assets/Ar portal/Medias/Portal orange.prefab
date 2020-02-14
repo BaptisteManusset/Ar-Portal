@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 749189778322750901}
   - component: {fileID: 627725087886095986}
   - component: {fileID: 7426051957574685160}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: "direction entr\xE9e"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 7435399827119085191}
   - component: {fileID: 4591059505051719516}
   - component: {fileID: 2611324879097080413}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 5039413305545126417}
   - component: {fileID: 462930305}
   - component: {fileID: 5417253460954933039}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Portal orange
   m_TagString: Untagged
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
@@ -328,7 +328,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9067803058652980640}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Destination
   m_TagString: Untagged
   m_Icon: {fileID: 0}
