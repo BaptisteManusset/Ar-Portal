@@ -12,6 +12,7 @@ public class Finisher : MonoBehaviour
     private void Awake()
     {
         gm = FindObjectOfType<GameManager>();
+        audio = FindObjectOfType<AudioSource>();
     }
 
 
@@ -20,6 +21,7 @@ public class Finisher : MonoBehaviour
         if (other.CompareTag(tagMask) == true)
         {
             gm.save++;
+            gm.UpdateUI();
             Destroy(other.gameObject);
             audio.Play();
         }

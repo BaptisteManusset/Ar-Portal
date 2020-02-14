@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
 using UnityEngine.Events;
-
+using TMPro;
 public class GameManager : MonoBehaviour
 {
     public int spawned = 0;
@@ -17,8 +16,17 @@ public class GameManager : MonoBehaviour
     public bool portalOrangeFound = false;
     public bool portalBlueFound = false;
     public static bool portalLinked = false;
+    [Space(30)] [SerializeField] TextMeshProUGUI score;
 
+    void Start()
+    {
+        UpdateUI();
 
+    }
+    public void UpdateUI()
+    {
+        score.text = save + "/" + succesNumber + " survivants";
+    }
     public void PortalOrangeState(bool found)
     {
         portalOrangeFound = found;
@@ -32,9 +40,8 @@ public class GameManager : MonoBehaviour
 
     private void LinkUpdater()
     {
-        GameManager.portalLinked = (portalBlueFound && portalOrangeFound ? true : false);
+        portalLinked = (portalBlueFound && portalOrangeFound ? true : false);
     }
-
 
     [ContextMenu("Toggle Blue")]
     public void ToggleBlue()
@@ -51,7 +58,7 @@ public class GameManager : MonoBehaviour
 
     public void FixedUpdate()
     {
-        if(succesNumber <= save)
+        if (succesNumber <= save)
         {
             endEvent.Invoke();
         }
