@@ -96,6 +96,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -4474,8 +4475,9 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 314744470}
   m_Enabled: 1
-  serializedVersion: 9
+  serializedVersion: 10
   m_Type: 1
+  m_Shape: 0
   m_Color: {r: 0.9716981, g: 0.871597, b: 0.6554379, a: 1}
   m_Intensity: 1
   m_Range: 10
@@ -4547,11 +4549,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 9aa21b72cef30ec48b3b9b77e37ff831,
-        type: 3}
-      propertyPath: m_Name
-      value: Sitting
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 9aa21b72cef30ec48b3b9b77e37ff831,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4621,6 +4618,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 9aa21b72cef30ec48b3b9b77e37ff831,
+        type: 3}
+      propertyPath: m_Name
+      value: Sitting
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9aa21b72cef30ec48b3b9b77e37ff831, type: 3}
@@ -7165,8 +7167,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
@@ -8190,8 +8190,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &581847583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8210,8 +8208,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 1af279bc0b0a04bfcb0606f9cdad3d37, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
@@ -10853,8 +10849,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Play
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11901,8 +11895,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 'Quitter
 
 '
@@ -21246,11 +21238,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: b1fa2c12dc393e5408d7d09c3e3a3b35,
-        type: 3}
-      propertyPath: m_Name
-      value: patato
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: b1fa2c12dc393e5408d7d09c3e3a3b35,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21320,6 +21307,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.033599865
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: b1fa2c12dc393e5408d7d09c3e3a3b35,
+        type: 3}
+      propertyPath: m_Name
+      value: patato
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1fa2c12dc393e5408d7d09c3e3a3b35, type: 3}
@@ -23881,8 +23873,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &1817427931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23901,8 +23891,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 1af279bc0b0a04bfcb0606f9cdad3d37, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
@@ -23934,8 +23922,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene:
-    sceneAsset: {fileID: 102900000, guid: 07f3ac13a6cbd124688da428e8e01ccb, type: 3}
-    scenePath: Assets/Ar portal/Scenes/Old/Actual Working.unity
+    sceneAsset: {fileID: 102900000, guid: 7fca6cf3427c3df4ca120d136726e287, type: 3}
+    scenePath: Assets/Ar portal/Scenes/Game.unity
 --- !u!1001 &1841244829
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26526,8 +26514,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: c9808fa7baaa3df48b9b968672e08ab4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
